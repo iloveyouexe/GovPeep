@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-19138737-26"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag("config", "UA-19138737-26", {"groups":"default","anonymize_ip":true,"page_placeholder":"PLACEHOLDER_page_path","allow_ad_personalization_signals":false});gtag("config", "G-B2JHHJ2CSX", {"groups":"default","page_placeholder":"PLACEHOLDER_page_location","allow_ad_personalization_signals":false});</script>
+<link rel="canonical" href="https://www.bep.gov/" />
+<link rel="shortlink" href="https://www.bep.gov/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Home" />
+<meta name="twitter:image:height" content="950" />
+<meta name="twitter:image:alt" content="Bureau of Engraving and Printing" />
+<meta name="twitter:image:width" content="1900" />
+<meta name="twitter:image" content="https://www.bep.gov/sites/default/files/images/bep-1900x950.png" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/themes/custom/bep/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Home | Engraving &amp; Printing</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_QAPZXczuYrdWZin9J5J6kdk_t73tuquz-VCHRrjZ6uU.css?delta=0&amp;language=en&amp;theme=bep&amp;include=eJyFTlsOwyAMu1BEjjSlkHaogVQEyujp11Wd9rkfy5b8mjVX6myaGOcfd52njzSY_xicPWMCG1Y54UTG0KwHwwtvHkrbSMALmQ1MbEYLG3gtjFlLIokHw8QbLqLT6eRXlZjXO-huCUJDW32EaF53LgM1s1eBPXI3vNAlDU34u5U1nMVCx0BRCjEvYBL9ej19A050Yuw" />
+<link rel="stylesheet" media="all" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" />
+<link rel="stylesheet" media="all" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_oSztEtrqRYXNU4-QfhAD0SXMJhHh1kHNqR-FJc6Ulpo.css?delta=3&amp;language=en&amp;theme=bep&amp;include=eJyFTlsOwyAMu1BEjjSlkHaogVQEyujp11Wd9rkfy5b8mjVX6myaGOcfd52njzSY_xicPWMCG1Y54UTG0KwHwwtvHkrbSMALmQ1MbEYLG3gtjFlLIokHw8QbLqLT6eRXlZjXO-huCUJDW32EaF53LgM1s1eBPXI3vNAlDU34u5U1nMVCx0BRCjEvYBL9ej19A050Yuw" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_oZIYf_bc89wYOwP5iEU7Ua5tMhjbfn0UYyeOi4IXeb8.css?delta=4&amp;language=en&amp;theme=bep&amp;include=eJyFTlsOwyAMu1BEjjSlkHaogVQEyujp11Wd9rkfy5b8mjVX6myaGOcfd52njzSY_xicPWMCG1Y54UTG0KwHwwtvHkrbSMALmQ1MbEYLG3gtjFlLIokHw8QbLqLT6eRXlZjXO-huCUJDW32EaF53LgM1s1eBPXI3vNAlDU34u5U1nMVCx0BRCjEvYBL9ej19A050Yuw" />
+
+    
+  
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="ETJCT-6BPVY-C8M5S-2MT6E-N42ND",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"ETJCT-6BPVY-C8M5S-2MT6E-N42ND",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="",n="eybzabagabfhkjqacqbaqaaaabtyyso4-f-6a80a57ab-clienttons-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"39","ak.cp":"1308811","ak.ai":parseInt("784068",10),"ak.ol":"0","ak.cr":24,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"102f08c","ak.r":35544,"ak.a2":e,"ak.m":"dscb","ak.n":"essl","ak.bpcip":"2603:9004:600:4a75::","ak.cport":11410,"ak.gh":"23.11.231.166","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1737247196","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==aMSKcUAcV1VW8phw6FQbEEkWVOAzKR0JlTfXtuDuGfZS39HEq6Ot11HRckOzMw3S65MR4Zkhy7CQaoYdlzsnQ3008gwlZp4pLy6t0Kj/sJ4w3AuXA8IAZgp5g8WvPJYbWySLEzmmmiIiwtzyWyB2DnPEsWh/P0iraoZLBnRwUzDpAJcagx1tEdy/t20/wWe3uB1aAOMqIdqla+oWYe/6MTQp/QdTPLJ2XdBdpYPrKtgzLdiJnbOiLTxvwlOe6+967tzlHv0haHB+FOM1t8I0FpZr9JfVCFF2JAf9ylMeTfdhMDZ6wwB2nP7gmla7M5rgxoQ+u2VmLDygHTMDw5eFwCVr4yVxSyI/3TiQbP5jAEBcNFE5ZM87yrsZk0YlZWgSl1vFy+gojnavA7zPrdpvhdqvn9iFmT+gTASGhgywVY0=","ak.pv":"17","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+  <body class="path-frontpage page-node-type-page">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+	<div class="usa-banner">
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+          <img class="usa-banner__header-flag" src="/libraries/uswds/dist/img/us_flag_small.png" alt="U.S. flag">
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto">
+          <p class="usa-banner__header-text">An official website of the United States government</p>
+          <p class="usa-banner__header-action" aria-hidden="true">Here’s how you know</p>
+        </div>
+        <button class="usa-accordion__button usa-banner__button"
+          aria-expanded="false" aria-controls="gov-banner">
+          <span class="usa-banner__button-text">Here’s how you know</span>
+        </button>
+      </div>
+    </header>
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner" hidden>
+      <div class="grid-row grid-gap-lg">
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="/libraries/uswds/dist/img/icon-dot-gov.svg" alt="Dot gov">
+          <div class="usa-media-block__body">
+            <p>
+              <strong>The .gov means it’s official.</strong>
+            </p>
+            <p>
+              Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you’re on a federal government site.
+            </p>
+          </div>
+        </div>
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="/libraries/uswds/dist/img/icon-https.svg" alt="Https">
+          <div class="usa-media-block__body">
+            <p>
+              <strong>The site is secure.</strong>
+            </p>
+            <p>
+              The <strong>https://</strong> ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="usa-overlay"></div>
+
+
+<header class="treas-header" role="banner">
+		<div class="treas-header__wrap">
+		  <div class="region region-header">
+    <div id="block-bep-branding" data-block-plugin-id="system_branding_block" class="block block-system block-system-branding-block">
+  
+    
+    <div id="treas-logo-title">
+    <a href="/" title="Home" rel="home" class="navbar-brand d-flex align-items-center treas-header__title">
+              <img src="/themes/custom/bep/logo.png" alt="Home" class="treas-header__logo"/>
+            <div class="bep-branding">
+                  <span class="treas-header__name sub-title hidden-sm">The Bureau of</span>
+          <span class="treas-header__name hidden-sm">Engraving <span class="amp">&</span> Printing</span>
+          <span class="treas-header__name-alt hidden-lg">BEP</span>
+              </div>
+          </a>
+  </div>
+</div>
+
+  </div>
+
+		<button class="navbar-toggler treas-burger-menu usa-menu-btn" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="sr-only">MENU</span>
+			<span class="treas-burger-menu__line"></span>
+			<span class="treas-burger-menu__line"></span>
+			<span class="treas-burger-menu__line"></span>
+		</button>
+	</div>
+	</header>
+<div class="treas-main-nav usa-nav">
+	<button class="usa-nav__close">
+		<img src="/themes/custom/gallatin/assets/img/close-white.svg" alt="close"/>
+	</button>
+	<nav class="treas-main-nav__wrap" role="navigation">
+		
+					  <div class="region region-primary-menu">
+    
+  
+  
+          <ul class="usa-nav__primary treas-main-nav__list usa-accordion">
+          <li class="treas-main-nav__list-item treas-search-nav">
+            <button class="usa-accordion__button search-btn treas-main-nav__link" aria-expanded="false" aria-controls="megamenu-search">
+              <span>Search</span>
+            </button>
+          </li>
+    
+          <li class="usa-nav__primary-item treas-main-nav__list-item  ">
+
+        
+                  <a href="/about-bep" class="usa-nav__link treas-main-nav__link ">
+            <span>About</span>
+          </a>
+        
+      </li>
+          <li class="usa-nav__primary-item treas-main-nav__list-item  ">
+
+                  <button class="usa-accordion__button usa-nav__link treas-main-nav__link" aria-expanded="false" aria-controls="megamenu-2">
+            <span>News</span>
+          </button>
+        
+                    
+  
+          <ul id="megamenu-2" class="usa-nav__submenu ">
+
+          
+          <li class=" usa-nav__submenu-item treas-main-nav__submenu-item ">
+
+        
+                  <a href="/news" class="">
+            <span>Latest News</span>
+          </a>
+        
+      </li>
+          <li class=" usa-nav__submenu-item treas-main-nav__submenu-item ">
+
+        
+                  <a href="/press-center" class="">
+            <span>Press Center</span>
+          </a>
+        
+      </li>
+        </ul>
+  
+        
+      </li>
+          <li class="usa-nav__primary-item treas-main-nav__list-item  ">
+
+        
+                  <a href="/currency" class="usa-nav__link treas-main-nav__link ">
+            <span>Currency</span>
+          </a>
+        
+      </li>
+          <li class="usa-nav__primary-item treas-main-nav__list-item  ">
+
+        
+                  <a href="/services" class="usa-nav__link treas-main-nav__link ">
+            <span>Services</span>
+          </a>
+        
+      </li>
+          <li class="usa-nav__primary-item treas-main-nav__list-item  ">
+
+        
+                  <a href="/visitor-centers" class="usa-nav__link treas-main-nav__link ">
+            <span>Visitor Centers</span>
+          </a>
+        
+      </li>
+          <li class="usa-nav__primary-item treas-main-nav__list-item  ">
+
+        
+                  <a href="/shop" class="usa-nav__link treas-main-nav__link ">
+            <span>Shop</span>
+          </a>
+        
+      </li>
+        </ul>
+  
+
+
+
+  </div>
+
+		
+		
+			</nav>
+</div>
+<div class="treas-search-menu grid-container" id="megamenu-search">
+			<div class="grid-row">
+			<div class="grid-col">
+				<div class="treas-search-menu__component">
+					  <div class="region region-search-menu">
+    <div id="block-searchgovblock-2" data-block-plugin-id="searchgov_block" class="block block-searchgov-drupal block-searchgov-block">
+  
+    
+      <div class="content">
+      
+        <form id="search_form" action="https://search.usa.gov/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓" />
+
+           <input type="hidden" name="affiliate" id="affiliate" value="bep" />
+           <label for="query">Enter Search Term(s):</label>
+           <input type="text" name="query" id="query" autocomplete="off" placeholder="Enter keywords" class="usagov-search-autocomplete" />
+           <div class="adv-search-link"><a href="https://search.usa.gov/search/advanced?affiliate=bep" class="hidden">Advanced Search</a></div>
+           <input type="submit" name="commit" value="Search" data-disable-with="Search" />
+        </form>
+    </div>
+  </div>
+
+  </div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	
+
+<main>
+	<div id="main-content" class="grid-container">
+		<div class="grid-row grid-gap">
+			<div class="grid-col-12">
+				  <div class="region region-highlighted">
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+
+
+				
+			</div>
+		</div>
+	</div>
+	<div class="region-content">
+		  <div class="region region-content">
+    <div id="block-bep-content" data-block-plugin-id="system_main_block" class="block block-system block-system-main-block">
+  
+    
+      <div class="content">
+      <article about="/home">
+
+  
+    
+
+  
+  <div>
+
+    
+      <div class="layout layout--onecol">
+    <div  class="layout__region layout__region--content">
+      <div data-block-plugin-id="entity_block:node" class="block block-entity-block block-entity-blocknode">
+  
+    
+      <div class="content">
+      <div class="slick blazy slick--field slick--field-slides slick--field-slides--default unslick slick--optionset--default slick--less" data-blazy="">  <div class="slick__slide slide slide--0">
+
+    
+ <div about="/slideshow-slide/money-comes-life-bureau-engraving-printing" class="node node--type-slideshow-slide node--promoted node--view-mode-default treas-hero--image" style="background-image:url('/sites/default/files/images/bep-hero-v1_0.jpg');">
+    <div class="grid-container">
+        <div class="grid-row flex-column flex-align-end">
+            <div class="treas-hero-card desktop:grid-col-5 tablet:grid-col-6 mobile-lg:grid-col-12 ">
+                    <div class="treas-hero-card--background"></div>
+                    <div class="treas-hero-card--title">Money comes to life at the Bureau of Engraving &amp; Printing</div>
+                    <div class="treas-hero-card--text"><p>Your guide to United States currency production.</p>
+</div>
+                    <a href="/currency" class="treas-hero-card--action usa-button usa-button--outline usa-button--inverse">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div></div>
+</div>
+
+    </div>
+  </div>
+
+    </div>
+  </div>
+  <div class="layout layout--onecol">
+    <div  class="layout__region layout__region--content">
+      
+    </div>
+  </div>
+  <div class="grid-container padding-top-5 padding-bottom-5 section-spacing layout layout--onecol">
+    <div  class="layout__region layout__region--content">
+      <div data-block-plugin-id="extra_field_block:node:page:links" class="block block-layout-builder block-extra-field-blocknodepagelinks">
+  
+    
+      <div class="content">
+      
+    </div>
+  </div>
+<div data-block-plugin-id="field_block:node:page:field_meta_tags" class="block block-layout-builder block-field-blocknodepagefield-meta-tags">
+  
+    
+      <div class="content">
+      
+    </div>
+  </div>
+
+<div data-block-plugin-id="block_content:da071b16-23d6-4386-bd28-a5162dbd27d2">
+ 
+        
+     <div data-block-plugin-id="block_content:da071b16-23d6-4386-bd28-a5162dbd27d2" class="usa-card-group bep-card-group">
+    <div class="usa-card bep-card desktop:grid-col tablet:grid-col-6">
+  <a class="usa-card__container text-no-underline treas-card" href="/currency/how-money-is-made" aria-label="The Buck Starts Here">
+        <div class="usa-card__header"><header class="usa-card__heading bep-card--title">The Buck Starts Here</header></div>
+        <div class="usa-card__media">
+            <div class="usa-card__img"><img src="/sites/default/files/images/The%20Buck%20Starts%20Here_Blue.jpg" alt="" /></div>
+        </div>
+        <div class="usa-card__body text-base-darkest"><p>Explore the currency production process from design to delivery.</p>
+</div>
+    </a>
+</div>
+<div class="usa-card bep-card desktop:grid-col tablet:grid-col-6">
+  <a class="usa-card__container text-no-underline treas-card" href="/services/mutilated-currency-redemption" aria-label="Mutilated Currency Redemption">
+        <div class="usa-card__header"><header class="usa-card__heading bep-card--title">Mutilated Currency Redemption</header></div>
+        <div class="usa-card__media">
+            <div class="usa-card__img"><img src="/sites/default/files/images/Mutilated%20Currency%20-%20Orange-%20cropped.jpg" alt="" /></div>
+        </div>
+        <div class="usa-card__body text-base-darkest"><p>The BEP redeems severely damaged Federal Reserve notes as a free public service.</p>
+</div>
+    </a>
+</div>
+<div class="usa-card bep-card desktop:grid-col tablet:grid-col-6">
+  <a class="usa-card__container text-no-underline treas-card" href="/services/currency-accessibility/us-currency-reader-program" aria-label="U.S. Currency Reader Program">
+        <div class="usa-card__header"><header class="usa-card__heading bep-card--title">U.S. Currency Reader Program</header></div>
+        <div class="usa-card__media">
+            <div class="usa-card__img"><img src="/sites/default/files/images/Currency%20Reader%20Program.jpg" alt="" /></div>
+        </div>
+        <div class="usa-card__body text-base-darkest"><p>Learn about free mobile apps and devices for all eligible blind and visually impaired individuals.</p>
+</div>
+    </a>
+</div>
+<div class="usa-card bep-card desktop:grid-col tablet:grid-col-6">
+  <a class="usa-card__container text-no-underline treas-card" href="https://catalog.usmint.gov/shop/paper-currency/" aria-label="Shop Online">
+        <div class="usa-card__header"><header class="usa-card__heading bep-card--title">Shop Online</header></div>
+        <div class="usa-card__media">
+            <div class="usa-card__img"><img src="/sites/default/files/images/Shop%20Green.jpg" alt="" /></div>
+        </div>
+        <div class="usa-card__body text-base-darkest"><p>Purchase uncut currency sheets, Lucky Money notes, specialty products and more.</p>
+</div>
+    </a>
+</div>
+
+   </div>
+  </div>
+    </div>
+  </div>
+<div  class="bg-base-lightest padding-top-5 padding-bottom-5 section-spacing layout layout--homepage-layout">
+  <div class="grid-container">
+    <div class="grid-row grid-gap">
+                        <div  class="layout__region layout__region--content_left desktop:grid-col-7">
+            <div class="desktop:padding-right-4">
+              <div class="views-element-container desktop:margin-top-0 margin-top-4 block block-views block-views-blocknews-block-1" data-block-plugin-id="views_block:news-block_1">
+  
+      <div class="treas-section-heading">
+      <h2 class="treas-section-heading--title">News</h2>
+    </div>
+    
+      <div class="content">
+      <div><div class="view view-news view-id-news view-display-id-block_1 js-view-dom-id-05254298bb5e78ce2499ddb96b1e8a65ee0550052ff4b2bfca7c87acc782559c">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row">
+
+
+<article about="/news/press-release/2024-07-12/employee-craftsmanship-demonstrations-summer-2024" class="node node--type-article node--promoted node--view-mode-card">
+   
+  <!-- News Card -->
+              <div class="treas-news-card node__content treas-news-card--featured-img">
+                            <div class="treas-news-card--media treas-news-card--media-default"></div>
+                      <div class="treas-news-card--content">
+            <div class="treas-news-card--date">
+						<div class="field field--name-field-date field--type-datetime field--label-hidden usa-prose field__item">July 12, 2024</div>
+			</div>
+            <div><a class="treas-news-card--title" href="/news/press-release/2024-07-12/employee-craftsmanship-demonstrations-summer-2024" title="Employee Craftsmanship Demonstrations Summer 2024">Employee Craftsmanship Demonstrations Summer 2024</a></div>
+            <a href="/news/press-release/2024-07-12/employee-craftsmanship-demonstrations-summer-2024" class="treas-news-card--action">Read more<span class="sr-only"> about Employee Craftsmanship Demonstrations Summer 2024</span></a>
+          </div>
+        </div>
+  </article>
+</div>
+    <div class="views-row">
+
+
+<article about="/news/press-release/2024-03-25/us-treasury-department-announces-appointment-patty-collins-director" class="node node--type-article node--promoted node--view-mode-card">
+   
+  <!-- News Card -->
+              <div class="treas-news-card node__content treas-news-card--featured-img">
+                              <div class="treas-news-card--media" style="background-image: url(/sites/default/files/images/Treasury-Building.jpg)"></div>
+                        <div class="treas-news-card--content">
+            <div class="treas-news-card--date">
+						<div class="field field--name-field-date field--type-datetime field--label-hidden usa-prose field__item">March 25, 2024</div>
+			</div>
+            <div><a class="treas-news-card--title" href="/news/press-release/2024-03-25/us-treasury-department-announces-appointment-patty-collins-director" title="U.S. Treasury Department Announces Appointment of Patty Collins as Director of the Bureau of Engraving and Printing ">U.S. Treasury Department Announces Appointment of Patty Collins as Director of t...</a></div>
+            <a href="/news/press-release/2024-03-25/us-treasury-department-announces-appointment-patty-collins-director" class="treas-news-card--action">Read more<span class="sr-only"> about U.S. Treasury Department Announces Appointment of Patty Collins as Director of the Bureau of Engraving and Printing </span></a>
+          </div>
+        </div>
+  </article>
+</div>
+
+    </div>
+  
+          <div class="more-link"><a href="/news?combine=&amp;tid=1&amp;article-start-date%5Bdate%5D=&amp;article-end-date%5Bdate%5D=">View All News</a></div>
+
+      </div>
+</div>
+
+    </div>
+  </div>
+
+            </div>
+          </div>
+                          <div  class="layout__region layout__region--content_right desktop:grid-col-5">
+            <div class="desktop:margin-top-0 margin-top-4 block block-block-content block-block-content96b86e3e-b14d-4611-ad1b-d4d7678b04c0" data-block-plugin-id="block_content:96b86e3e-b14d-4611-ad1b-d4d7678b04c0">
+  
+      <div class="treas-section-heading">
+      <h2 class="treas-section-heading--title">Denominations</h2>
+    </div>
+    
+      <div class="content">
+      
+						<div class="field field--name-field-text field--type-string-long field--label-hidden usa-prose field__item">Know your money. Know it&#039;s real.</div>
+			
+
+  <div class="denominations">
+          <div class="note">
+        <a href="/currency/circulating-currency/1-note" aria-label="1 dollar note">
+          <img loading="lazy" src="/sites/default/files/2021-12/denom-1.png" width="223" height="94" alt="One dollar note" typeof="foaf:Image" />
+
+
+        </a>
+      </div>
+          <div class="note">
+        <a href="/currency/circulating-currency/2-note" aria-label="2 dollar note">
+          <img loading="lazy" src="/sites/default/files/2021-12/denom-2.png" width="223" height="94" alt="Two dollar note" typeof="foaf:Image" />
+
+
+        </a>
+      </div>
+          <div class="note">
+        <a href="/currency/circulating-currency/5-note" aria-label="5 dollar note ">
+          <img loading="lazy" src="/sites/default/files/2021-12/denom-5.png" width="223" height="93" alt="Five dollar note" typeof="foaf:Image" />
+
+
+        </a>
+      </div>
+          <div class="note">
+        <a href="/currency/circulating-currency/10-note" aria-label="10 dollar note">
+          <img loading="lazy" src="/sites/default/files/2021-12/denom-10.png" width="222" height="94" alt="Ten dollar note" typeof="foaf:Image" />
+
+
+        </a>
+      </div>
+          <div class="note">
+        <a href="/currency/circulating-currency/20-note" aria-label="20 dollar note">
+          <img loading="lazy" src="/sites/default/files/2021-12/denom-20.png" width="223" height="94" alt="Twenty dollar note" typeof="foaf:Image" />
+
+
+        </a>
+      </div>
+          <div class="note">
+        <a href="/currency/circulating-currency/50-note" aria-label="50 dollar note">
+          <img loading="lazy" src="/sites/default/files/2021-12/denom-50.png" width="223" height="94" alt="Fifty dollar note" typeof="foaf:Image" />
+
+
+        </a>
+      </div>
+          <div class="note">
+        <a href="/currency/circulating-currency/100-note" aria-label="100 dollar note">
+          <img loading="lazy" src="/sites/default/files/2021-12/denom-100.png" width="224" height="94" alt="One hundred dollar note" typeof="foaf:Image" />
+
+
+        </a>
+      </div>
+      </div>
+
+    </div>
+  </div>
+
+          </div>
+                         </div>
+  </div>
+</div>
+<div  class="padding-top-5 padding-bottom-5 section-spacing layout layout--homepage-layout">
+  <div class="grid-container">
+    <div class="grid-row grid-gap">
+                                    <div  class="layout__region layout__region--content_bottom_left desktop:grid-col-8">
+          <div class="desktop:padding-right-4">
+            <div class="desktop:margin-top-0 margin-top-4 block block-block-content block-block-content6ee48f1b-3c7c-4b37-9462-83b7e3c47e6a" data-block-plugin-id="block_content:6ee48f1b-3c7c-4b37-9462-83b7e3c47e6a">
+  
+      <div class="treas-section-heading">
+      <h2 class="treas-section-heading--title">Resources and Services</h2>
+    </div>
+    
+      <div class="content">
+      
+<div class="treas-accent-card-grid treas-accent-card-grid-2">
+        <div class="treas-accent-card treas-accent-card--secondary-darker">
+        <div class="treas-accent-card--title">
+        Working at the BEP
+        </div>
+        <a href="/about/careers/working-at-the-bep"aria-label="Working at the BEP" class="treas-btn treas-btn--ghost treas-accent-card--action">
+        Explore Careers
+        </a>
+      </div>
+        <div class="treas-accent-card treas-accent-card--primary">
+        <div class="treas-accent-card--title">
+        Frequently Asked Questions
+        </div>
+        <a href="/currency/faqs"aria-label="Frequently Asked Questions" class="treas-btn treas-btn--ghost treas-accent-card--action">
+        View FAQs
+        </a>
+      </div>
+        <div class="treas-accent-card treas-accent-card--primary-darker">
+        <div class="treas-accent-card--title">
+        Training and Education
+        </div>
+        <a href="/currency/education-and-training-materials"aria-label="Training and Education" class="treas-btn treas-btn--ghost treas-accent-card--action">
+        Access Materials
+        </a>
+      </div>
+        <div class="treas-accent-card treas-accent-card--base-darker">
+        <div class="treas-accent-card--title">
+        Tour and Visitor Centers
+        </div>
+        <a href="/bep-tour-experience"aria-label="Tour and Visitor Centers" class="treas-btn treas-btn--ghost treas-accent-card--action">
+        Visit the BEP
+        </a>
+      </div>
+      </div>
+
+
+    </div>
+  </div>
+
+          </div>
+        </div>
+                     <div  class="layout__region layout__region--content_bottom_right desktop:grid-col-4">
+          <div class="desktop:margin-top-0 margin-top-4 block block-block-content block-block-content81c3b8a1-c14e-4b50-bcf1-54b1632e5280" data-block-plugin-id="block_content:81c3b8a1-c14e-4b50-bcf1-54b1632e5280">
+  
+      <div class="treas-section-heading">
+      <h2 class="treas-section-heading--title">History</h2>
+    </div>
+    
+      <div class="content">
+      
+						<div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden usa-prose field__item"><p><a href="/currency/history"><img alt="1800's women in counting room" class="image-style-horizontal-crop-480x195" height="195" loading="lazy" src="/sites/default/files/styles/horizontal_crop_480x195/public/2021-12/265_women_counting_room_FPO.jpg?itok=rVYzGaT9" typeof="foaf:Image" width="480"></a></p>
+
+<p>View our historical image collection and denominations above $100 no longer in production.</p>
+</div>
+			
+    </div>
+  </div>
+<div data-block-plugin-id="inline_block:text" data-inline-block-uuid="64371bec-f8a0-456a-b63f-9f350264f394" class="block block-layout-builder block-inline-blocktext">
+  
+    
+      <div class="content">
+      
+						<div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden usa-prose field__item"><div class="margin-top-5">&nbsp;</div></div>
+			
+    </div>
+  </div>
+<div data-block-plugin-id="block_content:0ec31987-b8db-4524-adbe-b3058bedd91a" class="block block-block-content block-block-content0ec31987-b8db-4524-adbe-b3058bedd91a">
+  
+      <div class="treas-section-heading">
+      <h2 class="treas-section-heading--title">Connect</h2>
+    </div>
+    
+      <div class="content">
+      
+						<div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden usa-prose field__item"><ul class="grid-row flex-row grid-gap social-media-connect" style="list-style-type: none; padding-inline-start: 0; flex-flow:row;">
+	<li class="twitter grid-col"><a aria-label="X" href="https://www.twitter.com/BEPgov"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:36px; position:relative;"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" fill="#000000"></path></svg></a></li>
+	<li class="facebook grid-col"><a aria-label="Facebook" href="https://www.facebook.com/BEPgov"><i class="fab fa-facebook-square fa-2x" style="color:#0054a2">&nbsp;</i></a></li>
+	<li class="instagram grid-col"><a aria-label="Instagram" href="https://www.instagram.com/bepgov/"><i class="fab fa-instagram fa-2x" style="color:#093c6e">&nbsp;</i></a></li>
+	<li class="youtube grid-col"><a aria-label="Youtube" href="https://www.youtube.com/@bepgov"><i class="fab fa-youtube fa-2x" style="color:#FF0000">&nbsp;</i></a></li>
+	<li class="linkedin grid-col"><a aria-label="LinkedIn" href="https://linkedin.com/company/bureau-of-engraving-and-printing"><i class="fab fa-linkedin fa-2x">&nbsp;</i></a></li>
+	<li class="email grid-col"><a aria-label="Email" href="mailto:moneyfactory.info@bep.gov"><i class="far fa-envelope fa-2x" style="color:#828282">&nbsp;</i></a></li>
+</ul>
+</div>
+			
+    </div>
+  </div>
+
+        </div>
+          </div>
+  </div>
+</div>
+  <div class="grid-container layout-gutter layout layout--onecol">
+    <div  class="layout__region layout__region--content">
+      <div class="desktop:margin-top-0 margin-top-4 block block-block-content block-block-contenta4d79f57-7f56-4baa-999d-7628f3deaa5f" data-block-plugin-id="block_content:a4d79f57-7f56-4baa-999d-7628f3deaa5f">
+  
+    
+      <div class="content">
+      
+						<div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden usa-prose field__item"><div class="grid-row stay-informed">
+<div class="grid-col padding-bottom-4">
+<form accept-charset="UTF-8" action="https://public.govdelivery.com/accounts/USBEP/subscribers/qualify" id="GD-snippet-form" method="post"><input name="utf8" type="hidden" value="✓">
+<p class="stay-informed__header">Stay Informed</p>
+
+<p style="margin:0 auto;">Sign up to receive BEP news and tour updates!</p>
+
+<div class="form margin-bottom-5">
+<div class="email_fields" style="display: block"><label class="hidden" for="email"><img alt="Required" class="required" src="https://content.govdelivery.com/images/required.gif">Email Address</label> <input class="form__input usa-input" id="email" name="email" placeholder="Email Address" type="text"> <input class="usa-button" data-disable-with="Submit" name="commit" type="submit" value="Sign me up"></div>
+</div>
+</form>
+</div>
+</div>
+</div>
+			
+    </div>
+  </div>
+
+    </div>
+  </div>
+
+  </div>
+
+</article>
+
+    </div>
+  </div>
+
+  </div>
+
+	</div>
+</main>
+
+
+<footer class="usa-footer usa-footer--medium" role="contentinfo">
+			<div class="usa-footer__primary-section">
+			<div class="grid-container">
+				<div class="grid-row grid-gap">
+					<div class="mobile-lg:grid-col-12">
+
+							<div class="region region-footer">
+		<div class="footer-primary"><nav
+	role="navigation" aria-labelledby="block-footerbureaus-menu"  id="block-footerbureaus" data-block-plugin-id="system_menu_block:bureaus" class="block block-menu navigation menu--bureaus col">
+			
+		<h3 class="treas-text--h2" id="block-footerbureaus-menu">Bureaus</h3>
+	
+
+				
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="https://www.ttb.gov">Alcohol and Tobacco Tax and Trade (TTB)</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://www.fiscal.treasury.gov/">Bureau of the Fiscal Service (BFS)</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://www.fincen.gov/">Financial Crimes Enforcement Network (FinCEN)</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.irs.gov">Internal Revenue Service (IRS)</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://www.occ.gov/">Office of the Comptroller of the Currency (OCC)</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://www.usmint.gov/">U.S. Mint</a>
+              </li>
+        </ul>
+  
+
+
+	</nav>
+<nav
+	role="navigation" aria-labelledby="block-footerinspectorgeneralsites-menu"  id="block-footerinspectorgeneralsites" data-block-plugin-id="system_menu_block:inspector-general-sites" class="block block-menu navigation menu--inspector-general-sites col">
+			
+		<h3 class="treas-text--h2" id="block-footerinspectorgeneralsites-menu">Inspector General Sites</h3>
+	
+
+				
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="https://www.treasury.gov/about/organizational-structure/ig/Pages/default.aspx">Office of Inspector General (OIG)</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://www.treasury.gov/tigta">Treasury Inspector General for Tax Administration (TIGTA)</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://www.sigtarp.gov/">Special Inspector General, Troubled Asset Relief Program (SIGTARP)</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://home.treasury.gov/services/report-fraud-waste-and-abuse">Report Scams, Fraud, Waste &amp; Abuse</a>
+              </li>
+        </ul>
+  
+
+
+	</nav>
+<nav
+	role="navigation" aria-labelledby="block-footerothergovernmentsites-menu"  id="block-footerothergovernmentsites" data-block-plugin-id="system_menu_block:other-government-sites" class="block block-menu navigation menu--other-government-sites col">
+			
+		<h3 class="treas-text--h2" id="block-footerothergovernmentsites-menu">Other Government Sites</h3>
+	
+
+				
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="https://sigpr.gov/">SIGPR.gov</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://www.usa.gov/">USA.gov</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://www.USAJOBS.gov">USAJOBS.gov</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://www.opm.gov">OPM.gov</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://www.MyMoney.gov">MyMoney.gov</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://www.Data.gov">Data.gov</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://www.Forms.gov">Forms.gov</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://www.Regulations.gov">Regulations.gov</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://vote.gov/">Vote.gov</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.performance.gov/">Performance.gov</a>
+              </li>
+        </ul>
+  
+
+
+	</nav>
+<nav
+	role="navigation" aria-labelledby="block-footersharedservices-menu"  id="block-footersharedservices" data-block-plugin-id="system_menu_block:u-s-government-shared" class="block block-menu navigation menu--u-s-government-shared col">
+			
+		<h3 class="treas-text--h2" id="block-footersharedservices-menu">Shared Services</h3>
+	
+
+				
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/services/currency-accessibility/meaningful-access-program-background">Meaningful Access</a>
+              </li>
+                <li class="menu-item">
+        <a href="/footer/privacy-policy" data-drupal-link-system-path="node/1131">Privacy Policy</a>
+              </li>
+                <li class="menu-item">
+        <a href="/footer/accessibility-statement" data-drupal-link-system-path="node/721">Accessibility Statement</a>
+              </li>
+                <li class="menu-item">
+        <a href="/footer/foia" data-drupal-link-system-path="node/956">Freedom of Information Act (FOIA)</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://home.treasury.gov/footer/no-fear-act">No FEAR Act Data</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://home.treasury.gov/footer/prohibited-personnel-practices-and-whistleblower-protection">Whistleblower Protection</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://home.treasury.gov/vulnerability-disclosure-policy">Vulnerability Disclosure Policy</a>
+              </li>
+        </ul>
+  
+
+
+	</nav>
+<nav
+	role="navigation" aria-labelledby="block-footeradditionalresources-menu"  id="block-footeradditionalresources" data-block-plugin-id="system_menu_block:additional-resources" class="block block-menu navigation menu--additional-resources col">
+			
+		<h3 class="treas-text--h2" id="block-footeradditionalresources-menu">Resources</h3>
+	
+
+				
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/about-bep" data-drupal-link-system-path="node/716">About BEP</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about-bep/careers" data-drupal-link-system-path="node/776">Careers</a>
+              </li>
+                <li class="menu-item">
+        <a href="/contact-us" data-drupal-link-system-path="node/826">Contact Us</a>
+              </li>
+                <li class="menu-item">
+        <a href="/currency/faqs" data-drupal-link-system-path="node/1326">FAQS</a>
+              </li>
+                <li class="menu-item">
+        <a href="/news" data-drupal-link-system-path="news">News</a>
+              </li>
+        </ul>
+  
+
+
+	</nav>
+</div>
+	</div>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="usa-footer__secondary-section">
+		<div class="grid-container">
+			<div class="grid-row grid-gap">
+									<div class="secondary-footer-l tablet:grid-col-8">
+						  <div class="region region-footer-secondary-left">
+    <nav role="navigation" aria-labelledby="block-footerutility-menu" id="block-footerutility" data-block-plugin-id="system_menu_block:utility-menu" class="block block-menu navigation menu--utility-menu">
+            
+  <h2 class="visually-hidden" id="block-footerutility-menu">Footer - Utility</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/footer/privacy-policy" data-drupal-link-system-path="node/1131">Privacy Policy</a>
+              </li>
+                <li class="menu-item">
+        <a href="/footer/google-privacy-policy-and-opt-out-links" data-drupal-link-system-path="node/1376">Google Privacy</a>
+              </li>
+                <li class="menu-item">
+        <a href="/sitemap.xml" data-drupal-link-system-path="sitemap.xml">Site Map</a>
+              </li>
+                <li class="menu-item">
+        <a href="/feedback" data-drupal-link-system-path="node/2756">Feedback</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+					</div>
+													<div class="secondary-footer-r margin-left-auto tablet:grid-col-4">
+						  <div class="region region-footer-secondary-right">
+    <div id="block-footersocialmedia" data-block-plugin-id="block_content:8fd6c4bd-b39d-4953-be0e-74c38be31ced" class="block block-block-content block-block-content8fd6c4bd-b39d-4953-be0e-74c38be31ced">
+  
+    
+      <div class="content">
+      
+						<div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden usa-prose field__item"><div class="social-icons">
+<ul>
+	<li class="twitter"><a aria-label="X" href="https://www.twitter.com/BEPgov"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:48px; position:relative; top:5px"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" fill="#ffffff"></path></svg></a></li>
+	<li class="facebook"><a aria-label="Facebook" href="https://www.facebook.com/BEPgov"><i class="fab fa-facebook-square fa-3x">&nbsp;</i></a></li>
+	<li class="youtube"><a aria-label="Youtube" href="https://www.youtube.com/@bepgov"><i class="fab fa-youtube fa-3x">&nbsp;</i></a></li>
+	<li class="instagram"><a aria-label="Instagram" href="https://www.instagram.com/bepgov/"><i class="fab fa-instagram fa-3x">&nbsp;</i></a></li>
+	<li class="linkedin"><a aria-label="LinkedIn" href="https://linkedin.com/company/bureau-of-engraving-and-printing"><i class="fab fa-linkedin fa-3x">&nbsp;</i></a></li>
+</ul>
+</div>
+</div>
+			
+    </div>
+  </div>
+
+  </div>
+
+					</div>
+							</div>
+		</div>
+	</div>
+</div></footer>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/6","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"google_analytics":{"account":"UA-19138737-26","trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"data":{"extlink":{"extTarget":true,"extTargetNoOverride":false,"extNofollow":true,"extNoreferrer":true,"extFollowNoOverride":false,"extClass":"0","extLabel":"(link is external)","extImgClass":false,"extSubdomains":true,"extExclude":"(\\.gov)","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":true,"extAlertText":"The link you selected is for a destination outside of the federal government. The Bureau of Engraving and Printing does not control this external site or its privacy policy, and cannot attest to the accuracy of the information it contains. Linking to this external site does not constitute an endorsement of the site or the information it contains by the Bureau of Engraving and Printing or any of its employees.","mailtoClass":"0","mailtoLabel":"(link sends email)","extUseFontAwesome":false,"extIconPlacement":"append","extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","whitelistedDomains":[]}},"blazy":{"loadInvisible":false,"offset":100,"saveViewportOffsetDelay":50,"validateDelay":25,"container":"","loader":true,"unblazy":false,"visibleClass":false},"blazyIo":{"disconnect":false,"rootMargin":"0px","threshold":[0,0.25,0.5,0.75,1]},"slick":{"accessibility":true,"adaptiveHeight":false,"autoplay":false,"pauseOnHover":true,"pauseOnDotsHover":false,"pauseOnFocus":true,"autoplaySpeed":3000,"arrows":true,"downArrow":false,"downArrowTarget":"","downArrowOffset":0,"centerMode":false,"centerPadding":"50px","dots":false,"dotsClass":"slick-dots","draggable":true,"fade":false,"focusOnSelect":false,"infinite":true,"initialSlide":0,"lazyLoad":"ondemand","mouseWheel":false,"randomize":false,"rtl":false,"rows":1,"slidesPerRow":1,"slide":"","slidesToShow":1,"slidesToScroll":1,"speed":500,"swipe":true,"swipeToSlide":false,"edgeFriction":0.34999999999999998,"touchMove":true,"touchThreshold":5,"useCSS":true,"cssEase":"ease","cssEaseBezier":"","cssEaseOverride":"","useTransform":true,"easing":"linear","variableWidth":false,"vertical":false,"verticalSwiping":false,"waitForAnimate":true},"ajax":[],"user":{"uid":0,"permissionsHash":"a8c1b5d70369208a8392b8be9d19f584c00e95a53b64a0a47c646120275b8d1c"}}</script>
+<script src="/sites/default/files/js/js_MLXO7l0CaZW_tnH2NW5HNpd5OX4qTL-FZR5RrIHPbHY.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=bep&amp;include=eJxdjEsOgzAMRC8U8JGQ81XENI5wKE1P34LSLtiM3rM9TiIJYeHC6C07pXQbmMQAt1xo18OrsaFSgliG2TUGn-S53DsEYT_9dXK-mPBqyGUlv-2VMQ81FvzudOXgszuwCnrMwFAHVkXW9ltv8sgahm0cBx3BVvM9dCtdOZ8vP9hQWsQ"></script>
+<script src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=TRE&amp;yt=true" id="_fed_an_ua_tag"></script>
+<script src="/sites/default/files/js/js_gCY6motjiu-FLPZId4UyUmxyhxZrRBOyupBbweEWV0Q.js?scope=footer&amp;delta=2&amp;language=en&amp;theme=bep&amp;include=eJxdjEsOgzAMRC8U8JGQ81XENI5wKE1P34LSLtiM3rM9TiIJYeHC6C07pXQbmMQAt1xo18OrsaFSgliG2TUGn-S53DsEYT_9dXK-mPBqyGUlv-2VMQ81FvzudOXgszuwCnrMwFAHVkXW9ltv8sgahm0cBx3BVvM9dCtdOZ8vP9hQWsQ"></script>
+
+  </body>
+</html>

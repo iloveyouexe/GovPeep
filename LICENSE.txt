@@ -1,0 +1,3 @@
+This project is protected under copyright law. The code provided is for personal, educational, and non-commercial use only. Any commercial use, redistribution, or derivative works require explicit written permission from the author. The author reserves all rights, including the right to file for patents related to the technology, workflow, or features described within this repository.
+
+This copyright and licensing statement applies exclusively to the source code and other original materials in this repository. It does not extend to logos or assets owned by third parties, including U.S. federal agency logos, which are used here for illustrative or educational purposes only and remain the property of their respective owners.
