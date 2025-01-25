@@ -1,10 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import AgencyList from "./pages/AgencyList.tsx";
+import Home from "./pages/Home.tsx";
 
 const App = () => {
     return (
         <Router>
             <Routes>
+                <Route path="/agency-list" element={<AgencyList />} />
                 <Route path="/" element={<Home />} />
             </Routes>
         </Router>

@@ -35,3 +35,23 @@ body {
 video {
   display: block; /* Removes any inline gaps or borders */
 }
+
+/* Tailwind CSS classes */
+.agency-card {
+  height: 150px; /* Fixed height for collapsed cards */
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.agency-card.expanded {
+  height: auto; /* Allows the card to expand naturally */
+}
+
+.agency-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; /* Prevents stretching */
+}
+
+
+

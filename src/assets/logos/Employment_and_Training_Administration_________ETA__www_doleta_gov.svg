@@ -96,7 +96,7 @@
             <a href="/">
                 <div class="d-flex align-items-center dol-logo-area--small">
                     <div class="DOL-header-logo">
-                        <img src="/themes/opa_theme/img/Agency_DOL_Logo_dark.svg" alt="United States Department of Labor" title="Home"/>
+                        <img src="/themes/opa_theme/img/Agency_DOL_Logo_dark.svg" alt="United States Department of Labor" title="AgencyList"/>
                     </div>
                     <span>U.S. Department of Labor</span>
                 </div>
@@ -476,7 +476,7 @@
 			<span id="system-breadcrumb" class="visually-hidden">Breadcrumb</span>
 			<ul class="breadcrumbs usa-breadcrumb__list">
 									<li>
-													<a href="/" class="usa-breadcrumb__link">Home</a>
+													<a href="/" class="usa-breadcrumb__link">AgencyList</a>
 											</li>
 							</ul>
 		</nav>
@@ -905,7 +905,7 @@ ol{list-style-type: decimal;}
 
                   <div class="dol-footer-seal">
                     <div class="dol-seal">
-                      <a href="/" title="Home">
+                      <a href="/" title="AgencyList">
                         <img src="/themes/opa_theme/img/DOL-MasterLogo_BLUE.svg" alt="United States Department of Labor" />
                       </a>
                     </div>
