@@ -14,8 +14,7 @@ const Home = () => {
                 muted
                 playsInline
             ></video>
-
-            {/* Overlay for content */}
+            
             <div className="relative flex flex-col items-center justify-center min-h-screen p-8 bg-gray-900 bg-opacity-50 text-white">
                 <h1 className="text-4xl font-extrabold text-center mb-6">
                     Welcome to GovPeep
