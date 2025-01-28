@@ -1,5 +1,5 @@
+import Cookies from 'js-cookie';
 import { createSlice } from '@reduxjs/toolkit';
-import { generate } from 'random-words';
 
 interface UserType {
   id: number;
@@ -8,6 +8,14 @@ interface UserType {
   password: string;
   registeredAt: Date;
   lastLogin: Date;
+}
+
+interface UserCookieType {
+  id: number;
+  name: string;
+  email: string;
+  password: string;
+  registeredAt: Date;
 }
 
 interface SignInActionType {
@@ -29,9 +37,13 @@ interface SignUpActionType {
 
 interface AuthSliceType {
   user: null | UserType;
+  error: string | null;
+  loading: boolean;
 }
 const initialState: AuthSliceType = {
-  user: null
+  user: null,
+  error: null,
+  loading: false,
 };
 
 export const authSlice = createSlice({
@@ -40,24 +52,45 @@ export const authSlice = createSlice({
   reducers: {
     signin: (state: AuthSliceType, action: SignInActionType) => {
       // this will turn into an api call returning userdata
-      const name = generate() + '-' + generate() + '-' + Math.floor(Math.random() * 9999);
-      const lastLogin = new Date();
+      state.loading = true;
+
+      const c = Cookies.get('user');
+      const userCookie: UserCookieType | null = c ? JSON.parse(c) : null;
+
+      if (!userCookie) {
+        state.error = 'User not found';
+        state.loading = false;
+        return;
+      }
+
+      const { id, name, email: userEmail, password: userPassword, registeredAt } = userCookie;
       const { email, password } = action.payload;
-      const id = Math.floor(Math.random() * 9999);
-      const registeredAt = new Date();
 
-      const user = { id, name, email, password, registeredAt, lastLogin };
-
-      state.user = user;
+      if (email === userEmail && password === userPassword) {
+        const lastLogin = new Date();
+        const user = { id, name, email, password, registeredAt, lastLogin };
+        state.user = user;
+        state.loading = false;
+      } else {
+        state.error = 'Invalid email or password';
+        state.loading = false;
+      }
     },
     signup: (state: AuthSliceType, action: SignUpActionType) => {
       // this will turn into an api call returning userdata
-      const { name, email, password } = action.payload;
       const id = Math.floor(Math.random() * 9999);
+      const { name, email, password } = action.payload;
       const registeredAt = new Date();
       const lastLogin = new Date();
+
       const user = { id, name, email, password, registeredAt, lastLogin };
       state.user = user;
+
+      Cookies.set('user', JSON.stringify({ id, name, email, password, registeredAt }), {
+        expires: 7, // days
+        secure: true,
+        sameSite: 'Strict', 
+      });
     },
     signout: (state: AuthSliceType) => {
       state.user = null;
