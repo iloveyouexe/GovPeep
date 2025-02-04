@@ -1,10 +1,16 @@
+import { Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="relative min-h-screen overflow-hidden">
+        <Box
+            sx={{
+                textAlign: 'center',
+                margin: 'auto'
+            }}
+        >
             {/* Background Video */}
             <video
                 className="fixed top-0 left-0 w-full h-full object-cover z-[-1]"
@@ -15,7 +21,7 @@ const Home = () => {
                 playsInline
             ></video>
             
-            <div className="relative flex flex-col items-center justify-center min-h-screen p-8 bg-gray-900 bg-opacity-50 text-white">
+            {/* <div className="relative flex flex-col items-center justify-center min-h-screen p-8 bg-gray-900 bg-opacity-50 text-white"> */}
                 <h1 className="text-4xl font-extrabold text-center mb-6">
                     Welcome to GovPeep
                 </h1>
@@ -28,8 +34,8 @@ const Home = () => {
                 >
                     View Agencies
                 </button>
-            </div>
-        </div>
+            {/* </div> */}
+        </Box>
     );
 };
 

@@ -2,7 +2,7 @@ import Cookies from 'js-cookie';
 import { createSlice } from '@reduxjs/toolkit';
 import { faker } from '@faker-js/faker';
 
-interface UserType {
+export interface UserType {
   id: number;
   name: string;
   email: string;
