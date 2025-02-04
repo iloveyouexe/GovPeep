@@ -4,7 +4,8 @@ import { Box, TextField } from '@mui/material';
 import { signin } from '../store/authSlice';
 import { RootState } from '../store/store';
 import { useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+
 
 const SignIn: React.FC = () => {
 
@@ -14,10 +15,12 @@ const SignIn: React.FC = () => {
     const [error, setError] = React.useState('');
 
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     useEffect(() => {
         if (auth.user !== null) {
             navigate('/');
+            
         } else if (auth.error) {
             setError(auth.error);
         }
@@ -25,7 +28,7 @@ const SignIn: React.FC = () => {
 
     const signIn = () => {
         if (email && password) {
-            signin({ email, password });
+            dispatch(signin({ email, password }));
         }
     }
 
@@ -42,11 +45,7 @@ const SignIn: React.FC = () => {
                 label="Password"
                 variant="outlined"
                 className="w-[60%] -mb-[15px]"
-                onChange={(e) => setPassword(e.target.value)} slotProps={{
-                    input: {
-                        readOnly: true,
-                    },
-                }}
+                onChange={(e) => setPassword(e.target.value)}
             />
             <button
                 className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-md w-1/5"
