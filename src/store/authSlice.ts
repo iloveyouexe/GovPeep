@@ -1,7 +1,8 @@
 import Cookies from 'js-cookie';
 import { createSlice } from '@reduxjs/toolkit';
+import { faker } from '@faker-js/faker';
 
-interface UserType {
+export interface UserType {
   id: number;
   name: string;
   email: string;
@@ -29,14 +30,13 @@ interface SignInActionType {
 interface SignUpActionType {
   type: string;
   payload: {
-    name: string;
     email: string;
     password: string;
   };
 }
 
-interface AuthSliceType {
-  user: null | UserType;
+export interface AuthSliceType {
+  user: UserType | null;
   error: string | null;
   loading: boolean;
 }
@@ -79,11 +79,15 @@ export const authSlice = createSlice({
     signup: (state: AuthSliceType, action: SignUpActionType) => {
       // this will turn into an api call returning userdata
       const id = Math.floor(Math.random() * 9999);
-      const { name, email, password } = action.payload;
+      const name = faker.word.adjective() + '-' + faker.word.noun() + '-' + Math.floor(Math.random() * 9999);
+      const { email, password } = action.payload;
+
       const registeredAt = new Date();
       const lastLogin = new Date();
 
       const user = { id, name, email, password, registeredAt, lastLogin };
+
+      console.log('user', user);
       state.user = user;
 
       Cookies.set('user', JSON.stringify({ id, name, email, password, registeredAt }), {

@@ -1,22 +1,24 @@
 import React from "react";
 import { Agency } from '../types/types.ts';
+import { Grid2 } from "@mui/material";
 
-interface Props {
+interface AgencyCardProps {
     agency: Agency;
     isExpanded: boolean;
     onToggleExpand: () => void;
     onRequestFOIA: (agency: Agency) => void;
 }
 
-const AgencyCard: React.FC<Props> = ({ agency, isExpanded, onToggleExpand, onRequestFOIA }) => {
+const AgencyCard: React.FC<AgencyCardProps> = ({ agency, isExpanded, onToggleExpand, onRequestFOIA }) => {
     const logoPath = agency.Logo ? `/src/assets/${agency.Logo}` : null;
 
     return (
-        <div
+        <Grid2
             className={`border border-gray-700 rounded-lg p-6 bg-gray-800 shadow-lg transition-all duration-300 cursor-pointer ${
                 isExpanded ? "row-span-2" : ""
             }`}
             onClick={onToggleExpand}
+            size={3}
         >
             <div className="flex justify-between items-center">
                 <h2 className="text-xl font-bold">{agency["Agency Name"]}</h2>
@@ -59,7 +61,7 @@ const AgencyCard: React.FC<Props> = ({ agency, isExpanded, onToggleExpand, onReq
                     </button>
                 </div>
             )}
-        </div>
+        </Grid2>
     );
 };
 

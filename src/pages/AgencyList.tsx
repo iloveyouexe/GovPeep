@@ -4,6 +4,7 @@ import FOIARequestForm from "../components/FOIARequestForm";
 import AgencyCard from "../components/AgencyCard";
 import { filterAgencies, toggleIndex } from "../utils/helpers";
 import { Agency } from '../types/types.ts';
+import { Grid2 } from "@mui/material";
 
 const AgencyList = () => {
     const [searchQuery, setSearchQuery] = useState("");
@@ -46,7 +47,7 @@ const AgencyList = () => {
                 </div>
 
                 {/* Agencies Grid */}
-                <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full">
+                <Grid2 container spacing={3}>
                     {filteredAgencies.map((agency, index) => (
                         <AgencyCard
                             key={index}
@@ -58,7 +59,7 @@ const AgencyList = () => {
                             onRequestFOIA={(agency) => setSelectedAgency(agency)}
                         />
                     ))}
-                </div>
+                </Grid2>
 
                 {/* No Results Message */}
                 {filteredAgencies.length === 0 && (
