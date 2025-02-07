@@ -21,13 +21,13 @@ const AgencyCard: React.FC<AgencyCardProps> = ({ agency, isExpanded, onToggleExp
             size={3}
         >
             <div className="flex justify-between items-center">
-                <h2 className="text-xl font-bold">{agency["Agency Name"]}</h2>
+                <h2 className="text-xl font-bold">{agency.Name}</h2>
             </div>
 
             {logoPath && (
                 <img
-                    src={logoPath}
-                    alt={`${agency["Agency Name"]} logo`}
+                    src={agency.Logo}
+                    alt={`${agency.Name} logo`}
                     className="h-16 w-16 object-contain mx-auto my-4"
                 />
             )}
@@ -43,10 +43,6 @@ const AgencyCard: React.FC<AgencyCardProps> = ({ agency, isExpanded, onToggleExp
                 >
                     {agency.Website}
                 </a>
-            </p>
-            <p className="text-sm">
-                <strong>Phone: </strong>
-                {agency["Phone Number"]}
             </p>
             {isExpanded && (
                 <div className="mt-4">

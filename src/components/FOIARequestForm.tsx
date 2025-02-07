@@ -3,20 +3,21 @@ import { validateFOIAForm } from "../utils/helpers";
 
 interface FOIARequestFormProps {
     agency: {
-        "Agency Name": string;
+        "Name": string;
         Description: string;
         Website: string;
-        "Phone Number": string;
+        "Phone Number": string | null;
     };
     onClose: () => void;
 }
+
 
 const FOIARequestForm = ({ agency, onClose }: FOIARequestFormProps) => {
     const [reason, setReason] = useState("");
 
     const handleSubmit = () => {
         if (validateFOIAForm(reason)) {
-            alert(`FOIA Request submitted for ${agency["Agency Name"]}`);
+            alert(`FOIA Request submitted for ${agency.Name}`);
             onClose();
         } else {
             alert("Please provide a reason for your FOIA request.");
@@ -34,7 +35,7 @@ const FOIARequestForm = ({ agency, onClose }: FOIARequestFormProps) => {
                 </button>
                 <h2 className="text-xl font-bold mb-4">Request an FOIA</h2>
                 <p className="text-sm text-gray-500 mb-2">
-                    Agency: <strong>{agency["Agency Name"]}</strong>
+                    Agency: <strong>{agency.Name}</strong>
                 </p>
                 <p className="text-sm mb-4">{agency.Description}</p>
 

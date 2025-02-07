@@ -1,17 +1,53 @@
-import { useState } from "react";
-import federalAgencies from "../not_fake_cia_data/agencies.json";
+import { useEffect, useState } from "react";
 import FOIARequestForm from "../components/FOIARequestForm";
 import AgencyCard from "../components/AgencyCard";
 import { filterAgencies, toggleIndex } from "../utils/helpers";
-import { Agency } from '../types/types.ts';
+import { Agency } from "../types/types.ts";
 import { Grid2 } from "@mui/material";
 
 const AgencyList = () => {
     const [searchQuery, setSearchQuery] = useState("");
     const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
     const [selectedAgency, setSelectedAgency] = useState<Agency | null>(null);
+    const [agencies, setAgencies] = useState<Agency[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
 
-    const filteredAgencies = filterAgencies(federalAgencies, searchQuery);
+    // API time
+    useEffect(() => {
+        const fetchAgencies = async () => {
+            try {
+                const response = await fetch("http://127.0.0.1:8080/api/agencies");
+                if (!response.ok) throw new Error("COOKED COOKED COOKED");
+
+                const rawData = await response.json();
+
+                const formattedData: Agency[] = rawData.map((agency: Record<string, unknown>) => ({
+                    id: agency.id,
+                    Name: agency.name,
+                    Description: agency.description,
+                    Website: agency.website,
+                    "Phone Number": agency.phone_number ? String(agency.phone_number) : "N/A",
+                    Logo: agency.logo,
+                    Governance: agency.governance,
+                    created_at: agency.created_at,
+                    updated_at: agency.updated_at
+                }));
+
+                setAgencies(formattedData);
+            } catch (error) {
+                setError("WE'RE COOKED!");
+                console.error(error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchAgencies();
+    }, []);
+
+
+    const filteredAgencies = filterAgencies(agencies, searchQuery);
 
     return (
         <div className="relative min-h-screen overflow-hidden">
@@ -30,7 +66,7 @@ const AgencyList = () => {
                 <h1 className="text-4xl font-extrabold text-center mb-6">
                     Welcome to GovPeep
                 </h1>
-                
+
                 {/* Search Section */}
                 <div className="w-full max-w-2xl mb-12">
                     <label htmlFor="searchQuery" className="block text-sm font-medium text-gray-300 text-center mb-2">
@@ -46,30 +82,35 @@ const AgencyList = () => {
                     />
                 </div>
 
+                {/* Loading & Error Messages */}
+                {loading && <p className="text-gray-400">Loading agencies...</p>}
+                {error && <p className="text-red-400">{error}</p>}
+
                 {/* Agencies Grid */}
-                <Grid2 container spacing={3}>
-                    {filteredAgencies.map((agency, index) => (
-                        <AgencyCard
-                            key={index}
-                            agency={agency}
-                            isExpanded={expandedIndex === index}
-                            onToggleExpand={() =>
-                                setExpandedIndex((prev) => toggleIndex(prev, index))
-                            }
-                            onRequestFOIA={(agency) => setSelectedAgency(agency)}
-                        />
-                    ))}
-                </Grid2>
+                {!loading && !error && (
+                    <Grid2 container spacing={3}>
+                        {filteredAgencies.map((agency, index) => (
+                            <AgencyCard
+                                key={agency.id}
+                                agency={agency}
+                                isExpanded={expandedIndex === index}
+                                onToggleExpand={() =>
+                                    setExpandedIndex((prev) => toggleIndex(prev, index))
+                                }
+                                onRequestFOIA={(agency) => setSelectedAgency(agency)}
+                            />
+                        ))}
+                    </Grid2>
+                )}
 
                 {/* No Results Message */}
-                {filteredAgencies.length === 0 && (
+                {!loading && !error && filteredAgencies.length === 0 && (
                     <p className="text-center text-gray-400 mt-10">
                         No agencies found. Try adjusting your search.
                     </p>
                 )}
 
                 {/* FOIA Request Form */}
-                //TODO WILL CHANGE
                 {selectedAgency && (
                     <FOIARequestForm
                         agency={selectedAgency}
