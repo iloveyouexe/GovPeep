@@ -4,7 +4,7 @@ export interface Agency {
     Description: string;
     Website: string;
     "Phone Number": string | null;
-    Logo: string;
+    Logo?: string;
     Governance: string;
     created_at: string;
     updated_at: string;
