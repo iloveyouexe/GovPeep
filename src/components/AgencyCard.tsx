@@ -10,7 +10,9 @@ interface AgencyCardProps {
 }
 
 const AgencyCard: React.FC<AgencyCardProps> = ({ agency, isExpanded, onToggleExpand, onRequestFOIA }) => {
-    const logoPath = agency.Logo ? `/src/assets/${agency.Logo}` : null;
+    const logoPath = agency.Logo && agency.Logo !== "No logo available"
+        ? `/logos/${agency.Logo.split("\\").pop()}` // ✅ Ensures correct path
+        : null;
 
     return (
         <Grid2
@@ -24,13 +26,17 @@ const AgencyCard: React.FC<AgencyCardProps> = ({ agency, isExpanded, onToggleExp
                 <h2 className="text-xl font-bold">{agency.Name}</h2>
             </div>
 
-            {logoPath && (
+            {/* Display Image */}
+            {logoPath ? (
                 <img
-                    src={agency.Logo}
-                    alt={`${agency.Name} logo`}
+                    src={logoPath} // ✅ Correct path now
+                    alt={`${agency.Name} Logo`}
                     className="h-16 w-16 object-contain mx-auto my-4"
                 />
+            ) : (
+                <p className="text-gray-400">No logo available</p>
             )}
+
             <p className="text-sm text-gray-300 mb-2">{agency.Description}</p>
             <p className="text-sm mb-2">
                 <strong>Website: </strong>
@@ -44,6 +50,7 @@ const AgencyCard: React.FC<AgencyCardProps> = ({ agency, isExpanded, onToggleExp
                     {agency.Website}
                 </a>
             </p>
+
             {isExpanded && (
                 <div className="mt-4">
                     <button
