@@ -1,5 +1,7 @@
 import { Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import FOIAInfoSection from '../components/FOIAInfoSection';
+import FOIAFAQ from '../components/FOIAFAQ';
 
 const Home = () => {
     const navigate = useNavigate();
@@ -20,13 +22,15 @@ const Home = () => {
                 muted
                 playsInline
             ></video>
-            
-            {/* <div className="relative flex flex-col items-center justify-center min-h-screen p-8 bg-gray-900 bg-opacity-50 text-white"> */}
+
+            {/* Main Heading */}
+            <div className="relative flex flex-col items-center justify-center min-h-screen p-8 bg-gray-900 bg-opacity-50 text-white">
                 <h1 className="text-4xl font-extrabold text-center mb-6">
                     Welcome to GovPeep
                 </h1>
                 <p className="text-lg text-white text-center mb-10 max-w-2xl">
-                    The Freedom of Information Act (FOIA) grants you the right to access federal agency records. Use GovPeep to streamline your public records requests with ease.
+                    The Freedom of Information Act (FOIA) grants you the right to access federal agency records.
+                    Use GovPeep to streamline your public records requests with ease.
                 </p>
                 <button
                     onClick={() => navigate('/agency-list')}
@@ -34,7 +38,13 @@ const Home = () => {
                 >
                     View Agencies
                 </button>
-            {/* </div> */}
+            </div>
+
+            {/* FOIA Information Section */}
+            <FOIAInfoSection />
+
+            {/* FOIA Frequently Asked Questions */}
+            <FOIAFAQ />
         </Box>
     );
 };

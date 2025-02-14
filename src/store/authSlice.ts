@@ -88,6 +88,8 @@ export const authSlice = createSlice({
       const user = { id, name, email, password, registeredAt, lastLogin };
 
       console.log('user', user);
+      console.log('id', id);
+      console.log('email', email);
       state.user = user;
 
       Cookies.set('user', JSON.stringify({ id, name, email, password, registeredAt }), {

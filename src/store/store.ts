@@ -16,7 +16,7 @@ const store = configureStore({
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
-      serializableCheck: false, // Ignore non-serializable errors from redux-persist
+      serializableCheck: false, 
     }),
 });
 
