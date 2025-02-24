@@ -6,7 +6,6 @@ const FOIAFAQ = () => {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {/* What Can I Ask? */}
                 <div className="p-6 border border-gray-700 bg-gray-800 rounded-lg shadow-lg">
                     <h3 className="text-xl font-semibold">❓ What can I ask for under FOIA?</h3>
                     <p className="text-gray-300 mt-2">
@@ -14,8 +13,7 @@ const FOIAFAQ = () => {
                         **answer questions**, or **conduct research** for you.
                     </p>
                 </div>
-
-                {/* Response Time */}
+                
                 <div className="p-6 border border-gray-700 bg-gray-800 rounded-lg shadow-lg">
                     <h3 className="text-xl font-semibold">⏳ How long will it take to get a response?</h3>
                     <p className="text-gray-300 mt-2">
@@ -24,7 +22,6 @@ const FOIAFAQ = () => {
                     </p>
                 </div>
 
-                {/* Fees */}
                 <div className="p-6 border border-gray-700 bg-gray-800 rounded-lg shadow-lg">
                     <h3 className="text-xl font-semibold">💰 Are there fees for FOIA requests?</h3>
                     <p className="text-gray-300 mt-2">
@@ -32,8 +29,7 @@ const FOIAFAQ = () => {
                         However, fees are often waived for **journalists, scholars, and non-commercial requests**.
                     </p>
                 </div>
-
-                {/* Denied Requests */}
+                
                 <div className="p-6 border border-gray-700 bg-gray-800 rounded-lg shadow-lg">
                     <h3 className="text-xl font-semibold">🔍 What if my request is denied?</h3>
                     <p className="text-gray-300 mt-2">
