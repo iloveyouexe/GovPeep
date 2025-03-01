@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import FOIAInfoSection from '../components/FOIAInfoSection';
-import FOIAFAQ from '../components/FOIAFAQ';
+// import FOIAInfoSection from '../components/FOIAInfoSection';
+// import FOIAFAQ from '../components/FOIAFAQ';
 
 const Home = () => {
     const navigate = useNavigate();
@@ -39,12 +39,12 @@ const Home = () => {
                     View Agencies
                 </button>
             </div>
-
-            {/* FOIA Information Section */}
-            <FOIAInfoSection />
-
-            {/* FOIA Frequently Asked Questions */}
-            <FOIAFAQ />
+            
+            {/*/!* FOIA Information Section *!/*/}
+            {/*<FOIAInfoSection />*/}
+            
+            {/*/!* FOIA Frequently Asked Questions *!/*/}
+            {/*<FOIAFAQ />*/}
         </Box>
     );
 };
