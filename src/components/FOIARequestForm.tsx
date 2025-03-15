@@ -1,3 +1,7 @@
+//todo Make this smaller in width, have this component + the FOIARequestFormPreview component 50/50 on the screen, so the user can input text to the AI 
+// as well as preview the response on the right as its being generated, these 2 components can be wrapped into another component and that can be what is rendered
+// onto the screen in place of the RequestForm
+
 import { useState } from "react";
 import { validateFOIAForm } from "../utils/helpers";
 
@@ -51,7 +55,7 @@ const FOIARequestForm = ({ agency, onClose }: FOIARequestFormProps) => {
                     onClick={handleSubmit}
                     className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
                 >
-                    Submit Request
+                    Begin Generating a FOIA
                 </button>
             </div>
         </div>

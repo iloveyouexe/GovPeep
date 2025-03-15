@@ -56,7 +56,7 @@ const AgencyCard: React.FC<AgencyCardProps> = ({ agency, isExpanded, onToggleExp
                         }}
                         className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
                     >
-                        Request an FOIA
+                        Build a FOIA Request
                     </button>
                 </div>
             )}
