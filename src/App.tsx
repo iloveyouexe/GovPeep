@@ -4,35 +4,42 @@ import Home from "./pages/Home.tsx";
 import SignIn from "./pages/SignIn.tsx";
 import SignUp from "./pages/SignUp.tsx";
 import Profile from "./pages/Profile.tsx";
-import { Box, Container } from "@mui/material";
 import Header from "./components/Header/Header.tsx";
 
 const App: React.FC = () => {
     return (
-        <Box
-            sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                minHeight: '100vh'
-            }}
-        >
-            <Header />
-            <Container sx={{
-                p: 6, 
-                flex: 1, 
-                display: 'flex',
-            }} className="bg-gray-900" disableGutters maxWidth={false}>
-                <Router>
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/agency-list" element={<AgencyList />} />
-                        <Route path="/sign-in" element={<SignIn />} />
-                        <Route path="/sign-up" element={<SignUp />} />
-                        <Route path="/profile" element={<Profile />} />
-                    </Routes>
-                </Router>
-            </Container>
-        </Box>
+        <>
+            {/* Global Background Video - positioned fixed, lowest layer */}
+            <video
+                className="fixed inset-0 w-full h-full object-cover z-0 pointer-events-none"
+                style={{
+                    height: "120vh",
+                }}
+                src="/GovPeepBG.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                disablePictureInPicture
+                controlsList="nodownload nofullscreen noremoteplayback"
+            />
+            
+            {/* App Content - above video */}
+            <div className="relative z-10 min-h-screen flex flex-col">
+                <Header />
+                <main className="flex-1">
+                    <Router>
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/agency-list" element={<AgencyList />} />
+                            <Route path="/sign-in" element={<SignIn />} />
+                            <Route path="/sign-up" element={<SignUp />} />
+                            <Route path="/profile" element={<Profile />} />
+                        </Routes>
+                    </Router>
+                </main>
+            </div>
+        </>
     );
 };
 
