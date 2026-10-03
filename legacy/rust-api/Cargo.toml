@@ -1,0 +1,20 @@
+[package]
+name = "govpeep-api"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-web = "4"
+serde = { version = "1.0", features = ["derive"] }
+sqlx = { version = "0.8.3", features = ["postgres", "uuid", "chrono", "runtime-tokio-native-tls"] }
+dotenv = "0.15"
+reqwest = { version = "0.11", features = ["json", "rustls-tls"] }
+argon2 = "0.5"
+uuid = { version = "1.4", features = ["serde", "v4"] }
+chrono = { version = "0.4", features = ["serde"] }
+rand_core = "0.6.4"
+log = "0.4.25"
+env_logger = "0.11.6"
+actix-cors = "0.7.0"
+serde_json = "1.0.138"
+

@@ -12,13 +12,13 @@ const Profile: React.FC = () => {
         return <h1>No user found.</h1>;
     }
 
-    const displayAttribute = (obj: any) => {
+    const displayAttribute = (obj: NonNullable<RootState['auth']['user']>) => {
 
-        return Object.keys(obj).map((key) => {
+        return Object.entries(obj).filter(([key]) => key !== 'password').map(([key, value]) => {
             return (
                 <li key={key} style={{ marginBottom: 5 }}>
                     <strong>{key}: </strong>
-                    <Chip variant="outlined" label={obj[key]} />
+                    <Chip variant="outlined" label={String(value)} />
                 </li>
             );
         });

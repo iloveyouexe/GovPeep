@@ -13,13 +13,17 @@ const AgencyList = () => {
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
+        const controller = new AbortController();
         const fetchAgencies = async () => {
+            setLoading(true);
+            setError(null);
             try {
                 const q = searchQuery.trim();
-                const baseUrl = import.meta.env.DEV ? "/api" : "https://govpeep-api.tech-hhamilton.workers.dev/api";
+                const baseUrl = (import.meta.env.VITE_API_BASE_URL ||
+                    (import.meta.env.DEV ? "/api" : "https://govpeep-api.tech-hhamilton.workers.dev/api")).replace(/\/$/, "");
                 const url = q ? `${baseUrl}/agencies?q=${encodeURIComponent(q)}` : `${baseUrl}/agencies`;
 
-                const response = await fetch(url);
+                const response = await fetch(url, { signal: controller.signal });
                 if (!response.ok) throw new Error("Failed to fetch agencies");
 
                 const rawData = await response.json();
@@ -38,14 +42,16 @@ const AgencyList = () => {
 
                 setAgencies(formattedData);
             } catch (error) {
+                if (controller.signal.aborted) return;
                 setError("Failed to load agencies. Please try again.");
                 console.error(error);
             } finally {
-                setLoading(false);
+                if (!controller.signal.aborted) setLoading(false);
             }
         };
 
-        fetchAgencies();
+        void fetchAgencies();
+        return () => controller.abort();
     }, [searchQuery]);
 
     return (

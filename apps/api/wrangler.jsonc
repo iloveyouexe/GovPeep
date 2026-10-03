@@ -1,0 +1,16 @@
+{
+  "name": "govpeep-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-09-27",
+  "d1_databases": [
+    {
+      "binding": "govpeep_db",
+      "database_name": "govpeep-db",
+      "database_id": "87cadaea-ec5c-4f76-8586-79802e80e28e",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
