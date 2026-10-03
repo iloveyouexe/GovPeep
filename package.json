@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "packageManager": "bun@1.3.14",
-  "workspaces": ["apps/*"],
+  "workspaces": ["apps/*", "packages/*"],
   "scripts": {
     "dev": "bun scripts/dev.mjs",
     "dev:web": "bun run --cwd apps/web dev",
@@ -15,12 +15,14 @@
     "typecheck": "bun run --cwd apps/web typecheck && bun run --cwd apps/api typecheck",
     "lint": "bun run --cwd apps/web lint",
     "test": "bun run --cwd apps/api test",
+    "test:e2e": "playwright test",
     "db:setup": "bun run --cwd apps/api db:setup",
     "db:migrate": "bun run --cwd apps/api db:migrate",
     "db:seed": "bun run --cwd apps/api db:seed",
     "cf-typegen": "bun run --cwd apps/api cf-typegen"
   },
   "devDependencies": {
+    "@playwright/test": "1.63.0",
     "concurrently": "9.2.1"
   }
 }

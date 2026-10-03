@@ -1,46 +1,68 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import AgencyList from "./pages/AgencyList.tsx";
-import Home from "./pages/Home.tsx";
-import SignIn from "./pages/SignIn.tsx";
-import SignUp from "./pages/SignUp.tsx";
-import Profile from "./pages/Profile.tsx";
-import Header from "./components/Header/Header.tsx";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { AuthProvider } from "./components/AuthProvider";
+import { Shell } from "./components/Shell";
+import { Overview } from "./pages/Overview";
+import { Directory, EntityPage } from "./pages/Directory";
+import { SignIn } from "./pages/SignIn";
+import { RequestList } from "./pages/RequestList";
+import { RequestPage } from "./pages/RequestPage";
+import { Schedules, Settings } from "./pages/Settings";
+import { Empty } from "./components/ui";
+import { AuthGate } from "./components/ui";
+import { PublicLayout } from "./components/PublicLayout";
+import { Landing } from "./pages/Landing";
 
-const App: React.FC = () => {
-    return (
-        <>
-            {/* Global Background Video - positioned fixed, lowest layer */}
-            <video
-                className="fixed inset-0 w-full h-full object-cover z-0 pointer-events-none"
-                style={{
-                    height: "120vh",
-                }}
-                src="/GovPeepBG.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                disablePictureInPicture
-                controlsList="nodownload nofullscreen noremoteplayback"
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AuthProvider>
+        <Routes>
+          <Route element={<PublicLayout />}>
+            <Route path="/" element={<Landing />} />
+            <Route path="/sign-in" element={<SignIn />} />
+            <Route
+              path="/sign-up"
+              element={<Navigate to="/sign-in" replace />}
             />
-            
-            {/* App Content - above video */}
-            <div className="relative z-10 min-h-screen flex flex-col">
-                <Header />
-                <main className="flex-1">
-                    <Router>
-                        <Routes>
-                            <Route path="/" element={<Home />} />
-                            <Route path="/agency-list" element={<AgencyList />} />
-                            <Route path="/sign-in" element={<SignIn />} />
-                            <Route path="/sign-up" element={<SignUp />} />
-                            <Route path="/profile" element={<Profile />} />
-                        </Routes>
-                    </Router>
-                </main>
-            </div>
-        </>
-    );
-};
-
-export default App;
+          </Route>
+          <Route element={<Shell />}>
+            <Route
+              path="/app"
+              element={
+                <AuthGate>
+                  <Overview />
+                </AuthGate>
+              }
+            />
+            <Route path="/directory" element={<Directory />} />
+            <Route path="/directory/:id" element={<EntityPage />} />
+            <Route path="/requests" element={<RequestList />} />
+            <Route path="/requests/new" element={<RequestPage />} />
+            <Route path="/requests/:id" element={<RequestPage />} />
+            <Route
+              path="/agency-list"
+              element={<Navigate to="/directory?jurisdiction=US" replace />}
+            />
+            <Route
+              path="/profile"
+              element={<Navigate to="/settings" replace />}
+            />
+            <Route path="/schedules" element={<Schedules />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route
+              path="*"
+              element={
+                <Empty
+                  title="That page is not here"
+                  description="Head back to your workspace to pick up where you left off."
+                  to="/app"
+                  action="Go to overview"
+                />
+              }
+            />
+          </Route>
+        </Routes>
+      </AuthProvider>
+    </BrowserRouter>
+  );
+}

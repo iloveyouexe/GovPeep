@@ -1,138 +1,171 @@
-# Cloudflare monorepo deployment
+# Deploying the GovPeep workspace
 
-GitHub needs no monorepo-specific setting. The target repository is
-`iloveyouexe/GovPeep`; Cloudflare's projects must build the appropriate workspace.
+The v2 workspace introduces real authentication and private request data. The
+existing `govpeep` Pages project, `govpeep-api` Worker, and `govpeep-db` D1 database
+are reused. Both applications build from `iloveyouexe/GovPeep`.
 
-These are the settings to apply during the deployment cutover. Local migration
-does not update dashboard settings or publish a release.
+## What changed since the directory demo
 
-## Resources to retain
+- Pages serves a same-origin `/api/*` gateway through a Worker service binding.
+- Browser API URLs are relative; the old `VITE_API_BASE_URL` variable is unused.
+- The API needs migrations `0002_workspace.sql`, `0003_directory.sql`, and
+  `0004_entity_logos.sql` (restores historical logo references).
+- Real email sign-in needs a verified sender domain and authentication secrets.
+- `EMAIL_MODE=disabled` is the committed production default until email is ready.
+  Google sign-in can be enabled independently; see `google-sign-in.md`. If neither
+  provider is configured, the public directory and landing page remain available.
+- The local mailbox is only available when development mode, development email
+  mode, and loopback request/application hosts all agree. Never deploy dev vars.
 
-Keep the `govpeep` Pages project, the `govpeep-api` Worker, and the `govpeep-db`
-D1 database. A monorepo changes the source layout, not the number of deployed
-applications. Archiving the old GitHub repository does not stop its already
-deployed Worker.
+## 1. API build configuration
 
-The obsolete connection is **govpeep-api -> iloveyouexe/GovPeep-API**.
-Disconnect that build integration, then connect the same Worker to GovPeep.
-
-## Frontend: existing `govpeep` Pages project
-
-Under the Pages project's build settings:
-
-| Setting | Value |
-| --- | --- |
-| Git repository | `iloveyouexe/GovPeep` |
-| Production branch | `main` |
-| Root directory | Repository root (leave blank) |
-| Build command | `bun install --frozen-lockfile && bun run build:web` |
-| Build output directory | `apps/web/dist` |
-| Build system | v3 (monorepos require v2 or later) |
-| `BUN_VERSION` | `1.3.14` |
-| `NODE_VERSION` | `24.15.0` |
-| `SKIP_DEPENDENCY_INSTALL` | `true` (the build command installs explicitly) |
-| `VITE_API_BASE_URL` | `https://govpeep-api.tech-hhamilton.workers.dev/api` |
-
-Suggested include watch paths: `apps/web/*`, `package.json`, `bun.lock`,
-`.gitattributes`. Cloudflare watch patterns use `*` to include nested paths.
-
-The video files use Git LFS. Verify that the build checks out the actual MP4
-objects rather than pointer text; fetch them with `git lfs pull` in the build
-step if the existing checkout integration does not do so. Validate video
-playback on the preview deployment.
-
-Pages' default SPA fallback serves `index.html` for client routes because the
-build has no top-level `404.html`. Check a direct visit to `/agency-list`.
-
-## Backend: existing `govpeep-api` Worker
-
-Under the Worker's **Settings > Build**, connect the **GovPeep** repository in
-place of **GovPeep-API**. Keep the existing Worker project, so its URL and D1
-association remain associated with the same service.
-
-Cloudflare's documented flow is **Workers & Pages > govpeep-api > Settings >
-Builds > Disconnect**, followed by **Connect** to select the new repository.
-Publish the monorepo code to its intended production branch before reconnecting,
-so Cloudflare can find `apps/api/wrangler.jsonc` immediately. If GovPeep is not
-listed, grant that repository access in the existing Cloudflare Workers & Pages
-GitHub App installation.
+Cloudflare **Workers & Pages > govpeep-api > Settings > Builds**:
 
 | Setting | Value |
 | --- | --- |
-| Git repository | `iloveyouexe/GovPeep` |
+| Repository | `iloveyouexe/GovPeep` |
 | Production branch | `main` |
-| Root directory | Repository root (`/`) |
+| Root directory | `/` |
 | Build command | `bun install --frozen-lockfile && bun run --cwd apps/api typecheck && bun run --cwd apps/api test` |
 | Deploy command | `bun run --cwd apps/api deploy` |
-| Version/preview command | `bun run --cwd apps/api wrangler versions upload` |
-| `BUN_VERSION` | `1.3.14` |
-| `NODE_VERSION` | `24.15.0` |
-| `SKIP_DEPENDENCY_INSTALL` | `true` (use the explicit Bun install in the build command) |
+| Version command | `bun run --cwd apps/api wrangler versions upload` |
+| Build variable `BUN_VERSION` | `1.3.14` |
+| Build variable `NODE_VERSION` | `24.15.0` |
+| Build variable `SKIP_DEPENDENCY_INSTALL` | `true` |
 
-The commands run from the Git root and select the API workspace explicitly.
-Keep the dashboard root at `/` with these commands; setting it to `apps/api`
-would resolve the workspace path twice. Bun uses the single root lockfile.
-Suggested include watch paths (relative to the Git root): `apps/api/*`,
-`package.json`, `bun.lock`.
+The root stays `/`: commands select `apps/api` themselves. Watch paths should
+include `apps/api/*`, `packages/*`, `package.json`, and `bun.lock`. Keeping `*`
+is also valid while bringing up the first deployment.
 
-`apps/api/wrangler.jsonc` retains:
+Wrangler and the Workers test runtime have been updated together for Better Auth:
+Wrangler 4.147.0, `@cloudflare/vitest-plugin` 1.3.6, and Vitest 4.1.11. The
+compatibility date is 2026-10-02 with `nodejs_compat` enabled.
 
-- Worker name: `govpeep-api`
-- D1 binding: `govpeep_db`
-- Database name: `govpeep-db`
-- Database ID: `87cadaea-ec5c-4f76-8586-79802e80e28e`
+## 2. Apply production migrations before deploying the new API
 
-The Worker toolchain is pinned to the previously locked Wrangler 4.61.0 and
-Vitest pool 0.12.7. Its existing compatibility date is retained for migration.
-If configuring non-production build commands on this version, use
-`bun run --cwd apps/api wrangler versions upload` rather than a newer Wrangler-only command.
-Version URLs still use the configured D1 binding; they are not isolated staging
-databases. Likewise, Pages previews use the production API unless their build
-environment explicitly overrides `VITE_API_BASE_URL`.
-
-## Database migrations
-
-Repository setup commands always use `--local`. Deploying the Worker does not
-run a database migration or import the development snapshot.
-
-The initial migration uses `CREATE TABLE IF NOT EXISTS` to support the existing
-agency table. After verifying the production schema matches, the explicit
-command to register/apply migrations is, from the repository root:
+From the repository root, with Cloudflare CLI authentication configured:
 
 ```sh
+bun run --cwd apps/api wrangler d1 migrations list govpeep-db --remote
 bun run --cwd apps/api wrangler d1 migrations apply govpeep-db --remote
 ```
 
-The initial schema is the same as the original API repository's `schema.sql`.
-Do not use the partial public development snapshot to replace production data.
+Review/backup the production database before applying new migrations. These
+migrations add tables and copy existing agency listings into the new directory;
+they do not drop the existing `agencies` table. The seed script is **local only**
+and should not be used as a production database replacement.
 
-## Cutover order
+The D1 binding remains `govpeep_db`, pointing to database `govpeep-db`, ID
+`87cadaea-ec5c-4f76-8586-79802e80e28e`. The old `/api/agencies` endpoint remains
+available for compatibility. New clients use `/api/entities`.
+The directory defaults to all jurisdictions and includes organizations without
+logos. Existing image assets are mapped back to the new entity records.
 
-1. Pause Pages automatic deployments under **Settings > Builds & deployments >
-   Configure Production deployments** by clearing **Enable automatic production
-   branch deployments**. Set preview branch deployments to **None** temporarily
-   if publishing a migration branch. Existing deployments continue serving.
-2. Disconnect the Worker's old repository under **Settings > Builds**.
-3. Verify `bun run typecheck`, `bun run lint`, `bun run test`, and `bun run build`,
-   then commit and publish/merge the monorepo code to GovPeep's `main` branch.
-4. Reconnect the Worker to GovPeep and apply the backend build settings above.
-   Deploy the Worker from `apps/api`; check both `/api/agencies` and
-   `/api/agencies?q=NASA` return HTTP 200.
-5. Apply the Pages build settings above, re-enable production deployments, and
-   trigger a deployment of the monorepo commit on `main`. Do not retry a
-   pre-migration commit with the new paths. Check navigation, search, logos,
-   and video, then restore the desired preview branch controls.
-6. The original `GovPeep-API` repository can remain archived. It retains the
-   original API history. In GitHub's Cloudflare App installation, optional
-   repository-access cleanup should remove only GovPeep-API and retain access
-   to GovPeep and any other projects using the same installation.
+## 3. Pages build configuration and service binding
+
+Cloudflare **Workers & Pages > govpeep > Settings**:
+
+| Setting | Value |
+| --- | --- |
+| Repository / branch | `iloveyouexe/GovPeep` / `main` |
+| Root directory | Repository root (blank or `/`) |
+| Build command | `bun install --frozen-lockfile && bun run build:web` |
+| Output directory | `apps/web/dist` |
+| Build variable `BUN_VERSION` | `1.3.14` |
+| Build variable `NODE_VERSION` | `24.15.0` |
+| Build variable `SKIP_DEPENDENCY_INSTALL` | `true` |
+
+Under the Pages project's bindings configuration, add a **service binding**:
+
+```text
+Binding name: API
+Worker:       govpeep-api
+```
+
+Deploy again after saving the binding. `bun run build:web` compiles
+`functions/api/[[path]].ts` into `apps/web/dist/_worker.js/index.js` (Pages advanced
+mode). `_routes.json` invokes it only for `/api/*`; static files and SPA routes
+remain assets. The gateway forwards the original request URL, cookies, and
+response cookies through the service binding. It never redirects the browser
+to `workers.dev` and reports HTTP 503 if the binding is missing.
+
+Watch paths: `apps/web/*`, `functions/*`, `packages/*`, `package.json`, `bun.lock`.
+Check a direct visit to `/directory` and `/requests` after deployment.
+The public landing page is `/`; the signed-in overview is `/app`.
+
+## 4. Enable sign-in providers
+
+For Google SSO, follow [Google sign-in setup](google-sign-in.md). Configure the
+server-side OAuth client ID/secret and exact frontend callback URI. It uses the
+same D1 accounts and cookies and does not require Resend or inbox access.
+
+For email links, complete the steps below when a sender domain is ready:
+
+1. Choose a domain and verify a sending domain with Resend. This can be a sending
+   subdomain; the website may remain on `govpeep.pages.dev` initially.
+2. Create a restricted Resend sending API key. Keep it server-side.
+3. Generate a random auth secret of at least 32 characters and store it using
+   Wrangler's interactive secret commands (never commit it):
+
+   ```sh
+   bun run --cwd apps/api wrangler secret put BETTER_AUTH_SECRET
+   bun run --cwd apps/api wrangler secret put RESEND_API_KEY
+   ```
+
+4. Edit the non-secret `vars` in `apps/api/wrangler.jsonc`:
+
+   ```jsonc
+   "vars": {
+     "APP_ENV": "production",
+     "APP_ORIGIN": "https://govpeep.pages.dev",
+     "EMAIL_MODE": "resend",
+     "EMAIL_FROM": "GovPeep <hello@your-verified-domain>"
+   }
+   ```
+
+   Replace the sender with an actually verified domain. `APP_ORIGIN` is the
+   canonical **frontend** origin, with no trailing slash. Change it when moving
+   the website to a custom domain. Deploy the configuration with the API.
+
+5. Verify `/api/config` **on the frontend origin**, then sign in with an address
+   you control. Check sign-out and saved requests. Direct Worker/preview origins
+   do not advertise email sign-in when they differ from the configured origin.
+
+The app reserves email usage atomically before sending and caps this API at
+80 attempts per UTC day, including failed attempts. Requests are rate-limited
+by Better Auth using Cloudflare's client IP header. Provider quotas can be
+shared with other projects, so this is not a global account billing guarantee.
+
+For local development, `bun run dev` creates `.dev.vars` with a random secret
+and uses an in-browser local mailbox. It never uses Resend in that mode.
+
+## Preview environments
+
+Private preview workspaces need their own Worker, D1 database, auth secret,
+service binding, and exact `APP_ORIGIN`. A version upload alone does not isolate
+production data. Until that environment is configured, preview the public UI
+and directory; production-only origin checks intentionally reject preview
+authentication/mutations. Production auth secrets must not be reused locally.
+
+## Release checks
+
+```sh
+bun install --frozen-lockfile
+bun run typecheck
+bun run lint
+bun run test
+bun run build
+```
+
+Run `bun run test:e2e` against local development after `bun run db:setup`.
+Apply production migrations, deploy the API, configure/deploy the Pages binding,
+then verify directory search and the actual sign-in/save/file/sign-out workflow.
+No real requests are sent to agencies by this milestone.
 
 ## References
 
-- [Pages monorepos](https://developers.cloudflare.com/pages/configuration/monorepos/)
-- [Pages build image and tool versions](https://developers.cloudflare.com/pages/configuration/build-image/)
+- [Pages service bindings](https://developers.cloudflare.com/pages/functions/bindings/#service-bindings)
+- [Pages advanced mode](https://developers.cloudflare.com/pages/functions/advanced-mode/)
 - [Workers Builds monorepos](https://developers.cloudflare.com/workers/ci-cd/builds/advanced-setups/)
-- [Workers Builds settings](https://developers.cloudflare.com/workers/ci-cd/builds/configuration/)
-- [Disconnecting/reconnecting Worker builds](https://developers.cloudflare.com/workers/ci-cd/builds/#disconnecting-builds)
-- [Pages automatic deployment controls](https://developers.cloudflare.com/pages/configuration/branch-build-controls/)
-- [Workers build image and explicit dependency installation](https://developers.cloudflare.com/workers/ci-cd/builds/build-image/)
+- [Better Auth magic links](https://www.better-auth.com/docs/plugins/magic-link)
+- [Resend email API](https://resend.com/docs/api-reference/emails/send-email)

@@ -6,26 +6,19 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1 --strictPort",
     "typecheck": "tsc -b",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && bun run --cwd ../api wrangler pages functions build ../../functions --outdir ../web/dist/_worker.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
-    "@faker-js/faker": "^9.4.0",
-    "@mui/material": "^6.4.3",
-    "@reduxjs/toolkit": "^2.5.1",
-    "js-cookie": "^3.0.5",
+    "@govpeep/contracts": "workspace:*",
+    "lucide-react": "1.50.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-redux": "^9.2.0",
-    "react-router-dom": "^7.1.3",
-    "redux-persist": "^6.0.0"
+    "react-router-dom": "^7.1.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
-    "@types/js-cookie": "^3.0.6",
     "@types/node": "^22.10.7",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
@@ -39,6 +32,6 @@
     "tailwindcss": "^3.4.17",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.18.2",
-    "vite": "^6.0.5"
+    "vite": "6.4.3"
   }
 }

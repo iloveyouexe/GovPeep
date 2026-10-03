@@ -1,6 +1,9 @@
 {
   "$schema": "https://unpkg.com/knip/schema.json",
   "workspaces": {
+    ".": {
+      "entry": ["scripts/*.mjs", "functions/**/*.ts", "tests/e2e/**/*.ts"]
+    },
     "apps/api": {
       // cloudflare:test is provided by the Vitest Workers runtime, not npm's cloudflare SDK.
       "ignoreDependencies": ["cloudflare"]

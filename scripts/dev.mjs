@@ -34,7 +34,8 @@ try {
   console.log('Press Ctrl+C to stop both services. Run bun run db:setup before first use.');
 
   const { result } = concurrently([
-    { name: 'api', command: `bun run dev:api --port ${apiPort}`, cwd: root },
+    { name: 'api', command: `bun run dev:api --port ${apiPort}`, cwd: root,
+      env: { APP_ORIGIN: `http://127.0.0.1:${webPort}` } },
     {
       name: 'web',
       command: `bun run dev:web --port ${webPort}`,

@@ -1,1 +1,14 @@
-# The agency API uses its D1 binding and needs no secrets for local development.
+# `bun run dev` creates .dev.vars automatically with a random local auth secret.
+# If creating this file yourself, use a random value of at least 32 characters.
+APP_ENV=development
+EMAIL_MODE=development
+BETTER_AUTH_SECRET=replace-with-a-long-random-local-secret
+
+# APP_ORIGIN is set by the development runner to match the frontend port.
+# Real sending is opt-in: EMAIL_MODE=resend, a verified sender, and a provider key.
+# RESEND_API_KEY=
+# EMAIL_FROM=GovPeep <hello@your-domain.example>
+
+# Optional Google sign-in. Keep both values on the server.
+# GOOGLE_CLIENT_ID=
+# GOOGLE_CLIENT_SECRET=
