@@ -61,15 +61,17 @@ GitHub App installation.
 | --- | --- |
 | Git repository | `iloveyouexe/GovPeep` |
 | Production branch | `main` |
-| Root directory | `apps/api` |
-| Build command | `bun install --frozen-lockfile && bun run typecheck && bun run test` |
-| Deploy command | `bun run deploy` |
+| Root directory | Repository root (`/`) |
+| Build command | `bun install --frozen-lockfile && bun run --cwd apps/api typecheck && bun run --cwd apps/api test` |
+| Deploy command | `bun run --cwd apps/api deploy` |
+| Version/preview command | `bun run --cwd apps/api wrangler versions upload` |
 | `BUN_VERSION` | `1.3.14` |
 | `NODE_VERSION` | `24.15.0` |
 | `SKIP_DEPENDENCY_INSTALL` | `true` (use the explicit Bun install in the build command) |
 
-Bun discovers the workspace root and its single lockfile from `apps/api`.
-Ensure the build uses Bun and does not generate an npm lockfile in this folder.
+The commands run from the Git root and select the API workspace explicitly.
+Keep the dashboard root at `/` with these commands; setting it to `apps/api`
+would resolve the workspace path twice. Bun uses the single root lockfile.
 Suggested include watch paths (relative to the Git root): `apps/api/*`,
 `package.json`, `bun.lock`.
 
@@ -83,7 +85,7 @@ Suggested include watch paths (relative to the Git root): `apps/api/*`,
 The Worker toolchain is pinned to the previously locked Wrangler 4.61.0 and
 Vitest pool 0.12.7. Its existing compatibility date is retained for migration.
 If configuring non-production build commands on this version, use
-`bunx wrangler versions upload` rather than a newer Wrangler-only command.
+`bun run --cwd apps/api wrangler versions upload` rather than a newer Wrangler-only command.
 Version URLs still use the configured D1 binding; they are not isolated staging
 databases. Likewise, Pages previews use the production API unless their build
 environment explicitly overrides `VITE_API_BASE_URL`.
@@ -98,7 +100,7 @@ agency table. After verifying the production schema matches, the explicit
 command to register/apply migrations is, from the repository root:
 
 ```sh
-bunx wrangler d1 migrations apply govpeep-db --remote --config apps/api/wrangler.jsonc
+bun run --cwd apps/api wrangler d1 migrations apply govpeep-db --remote
 ```
 
 The initial schema is the same as the original API repository's `schema.sql`.

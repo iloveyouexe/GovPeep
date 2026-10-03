@@ -2,7 +2,7 @@ import Cookies from 'js-cookie';
 import { createSlice } from '@reduxjs/toolkit';
 import { faker } from '@faker-js/faker';
 
-export interface UserType {
+interface UserType {
   id: number;
   name: string;
   email: string;
@@ -35,7 +35,7 @@ interface SignUpActionType {
   };
 }
 
-export interface AuthSliceType {
+interface AuthSliceType {
   user: UserType | null;
   error: string | null;
   loading: boolean;
@@ -46,7 +46,7 @@ const initialState: AuthSliceType = {
   loading: false,
 };
 
-export const authSlice = createSlice({
+const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
@@ -87,9 +87,6 @@ export const authSlice = createSlice({
 
       const user = { id, name, email, password, registeredAt, lastLogin };
 
-      console.log('user', user);
-      console.log('id', id);
-      console.log('email', email);
       state.user = user;
 
       Cookies.set('user', JSON.stringify({ id, name, email, password, registeredAt }), {
@@ -104,5 +101,5 @@ export const authSlice = createSlice({
   },
 });
 
-export const { signin, signup, signout } = authSlice.actions;
+export const { signin, signup } = authSlice.actions;
 export default authSlice.reducer;

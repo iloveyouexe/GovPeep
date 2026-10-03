@@ -91,6 +91,11 @@ are in [apps/api/data/README.md](apps/api/data/README.md).
 
 Use **`bun run test`**, not `bun test`: these tests need Vitest's Workers runtime.
 
+For an unused-code/dependency audit, run `bunx knip --no-progress` from the root.
+`knip.jsonc` accounts for the virtual `cloudflare:test` module supplied by the
+Worker test runtime. Public logos are selected dynamically by API data and
+should be checked against that data before removing assets.
+
 ## Current feature status
 
 - Agency listing and case-insensitive search run against D1.

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import FOIARequestForm from "../components/FOIARequestForm";
 import AgencyCard from "../components/AgencyCard";
-import { toggleIndex } from "../utils/helpers";
 import { Agency } from "../types/types.ts";
 
 const AgencyList = () => {
@@ -99,7 +98,7 @@ const AgencyList = () => {
                                 agency={agency}
                                 isExpanded={expandedIndex === index}
                                 onToggleExpand={() =>
-                                    setExpandedIndex((prev) => toggleIndex(prev, index))
+                                    setExpandedIndex((prev) => prev === index ? null : index)
                                 }
                                 onRequestFOIA={(agency) => setSelectedAgency(agency)}
                             />

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://unpkg.com/knip/schema.json",
+  "workspaces": {
+    "apps/api": {
+      // cloudflare:test is provided by the Vitest Workers runtime, not npm's cloudflare SDK.
+      "ignoreDependencies": ["cloudflare"]
+    }
+  }
+}

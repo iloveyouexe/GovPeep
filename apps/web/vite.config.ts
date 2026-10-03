@@ -5,7 +5,6 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   return {
     plugins: [react()],
-    assetsInclude: ['**/*.png', '**/*.jpg', '**/*.svg', '**/*.png_w_3840_q_75', '**/*.svg_full', '**/*.mp4'],
     server: {
       proxy: {
         '/api': {

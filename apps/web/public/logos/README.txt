@@ -1,0 +1,1 @@
+The logos in this directory are owned by their respective federal agencies and are used here for educational or illustrative purposes. No copyright is claimed on these assets, and their use does not imply endorsement or affiliation.
